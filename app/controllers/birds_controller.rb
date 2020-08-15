@@ -1,4 +1,5 @@
 class BirdsController < ApplicationController
+
   def index
     birds = Bird.all
     render json: birds
@@ -8,5 +9,5 @@ class BirdsController < ApplicationController
     bird = Bird.find_by(id: params[:id])
     render json: {id: bird.id, name: bird.name, species: bird.species }
   end
-  
+
 end
